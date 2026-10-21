@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     # No `environment:` here: it would change the OIDC subject the AWS role trusts
-    # (repo:PiotrPieprzyk/michal-page:ref:refs/heads/main).
+    # (repo:PiotrPieprzyk@51912807/michal-page@1428263030:ref:refs/heads/main).
     steps:
       - uses: actions/checkout@v4
 

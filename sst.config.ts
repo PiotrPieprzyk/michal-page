@@ -1,7 +1,10 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
 const DOMAIN = "michal.piotrpieprzyk.com";
-const GITHUB_REPO = "PiotrPieprzyk/michal-page";
+// The repo uses GitHub's immutable OIDC subject (owner@id/repo@id), so the
+// role must trust that form, not "PiotrPieprzyk/michal-page".
+// See: gh api repos/PiotrPieprzyk/michal-page/actions/oidc/customization/sub
+const GITHUB_OIDC_REPO = "PiotrPieprzyk@51912807/michal-page@1428263030";
 const DEFAULT_RECIPIENT = "piotr.pieprzyk.pp+michalpage@gmail.com";
 
 export default $config({
@@ -207,7 +210,7 @@ export default $config({
                     "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
                   },
                   StringLike: {
-                    "token.actions.githubusercontent.com:sub": `repo:${GITHUB_REPO}:ref:refs/heads/main`,
+                    "token.actions.githubusercontent.com:sub": `repo:${GITHUB_OIDC_REPO}:ref:refs/heads/main`,
                   },
                 },
               },
