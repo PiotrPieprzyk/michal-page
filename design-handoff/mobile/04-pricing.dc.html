@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Mobile – Cennik</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3D2B}a:hover{color:#14291D}
+td{border-top:1px solid #EDE4D3}
+</style>
+</helmet>
+<div style="width: 375px; height: 1320px; box-sizing: border-box; padding: 44px 16px 32px; display: flex; flex-direction: column; gap: 20px; font-family: Archivo, system-ui, sans-serif; color: #1B1B1B; background: #F5EFE4; overflow: hidden">
+
+  <div style="display: flex; flex-direction: column; gap: 8px">
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5C4A33">Cennik</span>
+    <h2 style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 800; color: #14291D">Orientacyjne ceny</h2>
+    <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Każde drzewo jest inne. Dokładną cenę podajemy po obejrzeniu albo na podstawie zdjęć — bezpłatnie.</p>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 14px; overflow: hidden">
+    <table style="width: 100%; border-collapse: collapse; font-size: 15px">
+      <caption style="text-align: left; padding: 14px 16px; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #5C4A33; background: #FAF6EF">Usługa · cena od</caption>
+      <tbody>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Wycinka drzewa do 10 m</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">iglaki, owocowe, małe liściaste</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #14291D">od [___] zł</td></tr>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Wycinka drzewa 10–20 m</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">średnie i duże drzewa</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #14291D">od [___] zł</td></tr>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Wycinka sekcyjna / alpinistyczna</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">przy domu, liniach, na skarpie</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; font-weight: 800; color: #14291D">wycena<br>indywid.</td></tr>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Cięcie pielęgnacyjne korony</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">za drzewo</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #14291D">od [___] zł</td></tr>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Frezowanie pniaka</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">za cm średnicy</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #14291D">od [__] zł</td></tr>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Rębakowanie gałęzi</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">za godzinę pracy</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #14291D">od [___] zł</td></tr>
+        <tr><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Wywóz drewna i gałęzi</div><div style="font-size: 13px; color: #5C4A33; margin-top: 2px">za kurs</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #14291D">od [___] zł</td></tr>
+        <tr style="background: #EEF2EA"><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Wycena na miejscu</div><div style="font-size: 13px; color: #3D4A3F; margin-top: 2px">bez zobowiązań</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #1F3D2B">0 zł</td></tr>
+        <tr style="background: #EEF2EA"><td style="padding: 14px 16px; vertical-align: top"><div style="font-weight: 700">Dojazd do [50] km</div><div style="font-size: 13px; color: #3D4A3F; margin-top: 2px">od [Miasto]</div></td><td style="padding: 14px 16px; text-align: right; vertical-align: top; white-space: nowrap; font-weight: 800; color: #1F3D2B">0 zł</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="margin: -6px 2px 0; font-size: 13px; line-height: 1.5; color: #5C4A33">Ceny [brutto, z VAT]. Drewno może zostać u Ciebie — pocięte na opał.</p>
+
+  <div style="background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 14px; padding: 18px 16px; display: flex; flex-direction: column; gap: 12px">
+    <h3 style="margin: 0; font-size: 18px; font-weight: 800; color: #14291D">Co wpływa na cenę?</h3>
+    <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.4">
+      <li style="display: flex; gap: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 20px"><polyline points="20 6 9 17 4 12"></polyline></svg>Wysokość i grubość drzewa</li>
+      <li style="display: flex; gap: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 20px"><polyline points="20 6 9 17 4 12"></polyline></svg>Dojazd — czy wjedzie podnośnik</li>
+      <li style="display: flex; gap: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 20px"><polyline points="20 6 9 17 4 12"></polyline></svg>Przeszkody: dach, linie, ogrodzenie</li>
+      <li style="display: flex; gap: 10px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 20px"><polyline points="20 6 9 17 4 12"></polyline></svg>Czy zabieramy drewno i gałęzie</li>
+    </ul>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <a href="tel:600000000" style="height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 12px; background: {{accent}}; color: #1B1B1B; text-decoration: none; font-weight: 800; font-size: 18px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Zadzwoń po wycenę
+    </a>
+    <a href="#formularz" style="min-height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 700; font-size: 16px">
+      lub wyślij zdjęcie do wyceny
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF6B1A","options":["#FF6B1A","#FFC20E"]},"$preview":{"width":375,"height":1320}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#FF6B1A' };
+  }
+}
+</script>
+</body>
+</html>

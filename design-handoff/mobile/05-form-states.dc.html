@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Mobile – Formularz, stany</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3D2B}a:hover{color:#14291D}
+input::placeholder,textarea::placeholder{color:#7A6A52}
+</style>
+</helmet>
+<div style="width: 1700px; height: 1260px; box-sizing: border-box; padding: 32px 40px 40px; display: flex; gap: 40px; align-items: flex-start; font-family: Archivo, system-ui, sans-serif; color: #1B1B1B; background: #E4DACA; overflow: hidden">
+
+  <sc-for list="{{states}}" as="s" hint-placeholder-count="4">
+    <div style="flex: 0 0 375px; display: flex; flex-direction: column; gap: 12px">
+      <div style="font-size: 14px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #3D3226">{{s.label}}</div>
+
+      <section style="width: 375px; min-height: 1140px; box-sizing: border-box; background: #FFFFFF; padding: 36px 16px 32px; display: flex; flex-direction: column; gap: 18px">
+
+        <sc-if value="{{s.notSent}}" hint-placeholder-val="{{true}}">
+          <div style="display: flex; flex-direction: column; gap: 8px">
+            <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5C4A33">Bezpłatna wycena</span>
+            <h2 style="margin: 0; font-size: 30px; line-height: 1.1; font-weight: 800; color: #14291D">Wyślij zdjęcie drzewa</h2>
+            <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Zrób 2–3 zdjęcia: całe drzewo i to, co wokół niego. Oddzwonimy z wyceną.</p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="m-name-{{$index}}" style="font-size: 15px; font-weight: 700">Imię</label>
+            <input id="m-name-{{$index}}" type="text" placeholder="np. Jan" style="height: 52px; box-sizing: border-box; padding: 0 14px; border: 1.5px solid #8A7A5F; border-radius: 10px; font: 400 16px Archivo, sans-serif; color: #1B1B1B">
+          </div>
+
+          <sc-if value="{{s.phoneOk}}" hint-placeholder-val="{{true}}">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="m-tel-{{$index}}" style="font-size: 15px; font-weight: 700">Telefon <span style="color: #B3261E">*</span></label>
+              <input id="m-tel-{{$index}}" type="tel" placeholder="np. 600 000 000" style="height: 52px; box-sizing: border-box; padding: 0 14px; border: 1.5px solid #8A7A5F; border-radius: 10px; font: 400 16px Archivo, sans-serif; color: #1B1B1B">
+            </div>
+          </sc-if>
+          <sc-if value="{{s.error}}" hint-placeholder-val="{{false}}">
+            <div style="display: flex; flex-direction: column; gap: 6px">
+              <label for="m-tel-e-{{$index}}" style="font-size: 15px; font-weight: 700">Telefon <span style="color: #B3261E">*</span></label>
+              <input id="m-tel-e-{{$index}}" type="tel" aria-invalid="true" placeholder="np. 600 000 000" style="height: 52px; box-sizing: border-box; padding: 0 14px; border: 2px solid #B3261E; border-radius: 10px; font: 400 16px Archivo, sans-serif; color: #1B1B1B; background: #FDF3F2">
+              <span style="display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: #B3261E">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                Podaj numer — inaczej nie oddzwonimy.
+              </span>
+            </div>
+          </sc-if>
+
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="m-city-{{$index}}" style="font-size: 15px; font-weight: 700">Miejscowość</label>
+            <input id="m-city-{{$index}}" type="text" placeholder="np. [Miejscowość]" style="height: 52px; box-sizing: border-box; padding: 0 14px; border: 1.5px solid #8A7A5F; border-radius: 10px; font: 400 16px Archivo, sans-serif; color: #1B1B1B">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <label for="m-desc-{{$index}}" style="font-size: 15px; font-weight: 700">Opis <span style="font-weight: 400; color: #5C4A33">(opcjonalnie)</span></label>
+            <textarea id="m-desc-{{$index}}" rows="3" placeholder="np. świerk ok. 15 m, rośnie 3 m od domu" style="box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #8A7A5F; border-radius: 10px; font: 400 16px/1.4 Archivo, sans-serif; color: #1B1B1B; resize: vertical"></textarea>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-size: 15px; font-weight: 700">Zdjęcia drzewa</span>
+
+            <sc-if value="{{s.empty}}" hint-placeholder-val="{{true}}">
+              <div style="border: 2px dashed #8A7A5F; border-radius: 12px; background: #FAF6EF; padding: 22px 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center">
+                <div style="width: 52px; height: 52px; border-radius: 50%; background: #E9DCC6; display: flex; align-items: center; justify-content: center; color: #1F3D2B">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                </div>
+                <span style="font-size: 16px; font-weight: 800; color: #14291D">Dodaj zdjęcia drzewa</span>
+                <span style="font-size: 13px; color: #5C4A33">Zrób zdjęcie lub wybierz z galerii · do 5 zdjęć · JPG, PNG, HEIC · max 10 MB</span>
+                <label for="m-file-{{$index}}" style="height: 48px; padding: 0 20px; border-radius: 10px; background: #1F3D2B; color: #FFFFFF; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; cursor: pointer">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  Wybierz zdjęcia
+                </label>
+                <input id="m-file-{{$index}}" type="file" accept="image/*" multiple style="position: absolute; width: 1px; height: 1px; opacity: 0">
+              </div>
+            </sc-if>
+
+            <sc-if value="{{s.uploading}}" hint-placeholder-val="{{false}}">
+              <div style="border: 1.5px solid #CDBFA6; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 10px">
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <div style="flex: 0 0 48px; height: 48px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 6px, #C3AF8E 6px 12px)"></div>
+                  <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+                    <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 700">IMG_2041.jpg</span><span style="color: #1F3D2B; font-weight: 700">Gotowe</span></div>
+                    <div style="height: 6px; border-radius: 3px; background: #1F3D2B"></div>
+                  </div>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-label="Wysłane" role="img"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <div style="flex: 0 0 48px; height: 48px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 6px, #C3AF8E 6px 12px)"></div>
+                  <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+                    <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 700">IMG_2042.jpg</span><span style="color: #3D3226">64% · 3,2 MB</span></div>
+                    <div style="height: 6px; border-radius: 3px; background: #EDE4D3; overflow: hidden"><div style="width: 64%; height: 6px; background: #1F3D2B"></div></div>
+                  </div>
+                  <button type="button" aria-label="Anuluj wysyłanie" style="flex: 0 0 44px; height: 44px; border: 0; background: transparent; color: #5C4A33; display: flex; align-items: center; justify-content: center; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <div style="flex: 0 0 48px; height: 48px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 6px, #C3AF8E 6px 12px)"></div>
+                  <div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px">
+                    <div style="display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 700">IMG_2043.jpg</span><span style="color: #5C4A33">W kolejce</span></div>
+                    <div style="height: 6px; border-radius: 3px; background: #EDE4D3"></div>
+                  </div>
+                  <div style="flex: 0 0 44px"></div>
+                </div>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{s.error}}" hint-placeholder-val="{{false}}">
+              <div style="border: 2px solid #B3261E; border-radius: 12px; padding: 10px; display: flex; flex-direction: column; gap: 10px">
+                <div style="display: flex; align-items: center; gap: 10px">
+                  <div style="flex: 0 0 48px; height: 48px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 6px, #C3AF8E 6px 12px)"></div>
+                  <div style="flex: 1 1 auto; display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 700">IMG_2041.jpg</span><span style="color: #1F3D2B; font-weight: 700">Gotowe</span></div>
+                </div>
+                <div style="background: #FDF3F2; border-radius: 8px; padding: 10px; display: flex; flex-direction: column; gap: 10px">
+                  <div style="display: flex; gap: 10px">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B3261E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 22px"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <div style="display: flex; flex-direction: column; gap: 2px; font-size: 14px; line-height: 1.4">
+                      <span style="font-weight: 700">IMG_2043.HEIC — nie wysłano</span>
+                      <span style="color: #8C1D18">Plik jest za duży (14 MB). Maksymalnie 10 MB — zrób zdjęcie jeszcze raz lub wybierz mniejsze.</span>
+                    </div>
+                  </div>
+                  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+                    <button type="button" style="height: 44px; border-radius: 8px; border: 1.5px solid #1F3D2B; background: #FFFFFF; color: #1F3D2B; font: 700 14px Archivo, sans-serif; cursor: pointer">Spróbuj ponownie</button>
+                    <button type="button" style="height: 44px; border-radius: 8px; border: 0; background: transparent; color: #8C1D18; font: 700 14px Archivo, sans-serif; text-decoration: underline; cursor: pointer">Usuń plik</button>
+                  </div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+
+          <label style="display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.45; color: #3D3226; min-height: 44px">
+            <input type="checkbox" style="flex: 0 0 22px; width: 22px; height: 22px; margin: 0; accent-color: #1F3D2B">
+            Zgadzam się na kontakt w sprawie wyceny. Dane przetwarzamy zgodnie z <a href="#">polityką prywatności</a>.
+          </label>
+
+          <sc-if value="{{s.canSubmit}}" hint-placeholder-val="{{true}}">
+            <button type="submit" style="height: 56px; border-radius: 12px; border: 0; background: {{accent}}; color: #1B1B1B; font: 800 18px Archivo, sans-serif; cursor: pointer">Wyślij zgłoszenie</button>
+          </sc-if>
+          <sc-if value="{{s.uploading}}" hint-placeholder-val="{{false}}">
+            <button type="submit" disabled style="height: 56px; border-radius: 12px; border: 0; background: #E7DFD0; color: #5C4A33; font: 700 16px Archivo, sans-serif; display: flex; align-items: center; justify-content: center; gap: 10px">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.2-8.56"></path></svg>
+              Czekaj, wysyłamy zdjęcia…
+            </button>
+          </sc-if>
+
+          <a href="tel:600000000" style="min-height: 44px; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; color: #3D3226">Wolisz porozmawiać?&#160;<strong style="color: #14291D">600 000 000</strong></a>
+        </sc-if>
+
+        <sc-if value="{{s.sent}}" hint-placeholder-val="{{false}}">
+          <div role="status" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding-top: 40px">
+            <div style="width: 84px; height: 84px; border-radius: 50%; background: #1F3D2B; color: #FFFFFF; display: flex; align-items: center; justify-content: center">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <h2 style="margin: 0; font-size: 28px; line-height: 1.15; font-weight: 800; color: #14291D">Dziękujemy!<br>Zgłoszenie wysłane.</h2>
+            <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Mamy Twoje 3 zdjęcia. Oddzwonimy z wyceną [tego samego dnia roboczego] na numer:</p>
+            <span style="font-size: 22px; font-weight: 800; color: #14291D">600 000 000</span>
+          </div>
+          <div style="background: #FAF6EF; border: 1px solid #E2D6C2; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+            <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #5C4A33">Wysłane zdjęcia</span>
+            <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+              <div style="height: 84px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 8px, #C3AF8E 8px 16px)"></div>
+              <div style="height: 84px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 8px, #C3AF8E 8px 16px)"></div>
+              <div style="height: 84px; border-radius: 8px; background: repeating-linear-gradient(135deg, #CDBB9C 0 8px, #C3AF8E 8px 16px)"></div>
+            </div>
+          </div>
+          <a href="tel:600000000" style="height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 12px; background: {{accent}}; color: #1B1B1B; text-decoration: none; font-weight: 800; font-size: 17px">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Pilne? Zadzwoń teraz
+          </a>
+          <button type="button" style="height: 52px; border-radius: 12px; border: 2px solid #1F3D2B; background: #FFFFFF; color: #1F3D2B; font: 700 16px Archivo, sans-serif; cursor: pointer">Wyślij kolejne zgłoszenie</button>
+        </sc-if>
+
+      </section>
+    </div>
+  </sc-for>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF6B1A","options":["#FF6B1A","#FFC20E"]},"$preview":{"width":1700,"height":1260}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const states = [
+      { label: '1 · Pusty (start)', empty: true },
+      { label: '2 · Wysyłanie zdjęć', uploading: true },
+      { label: '3 · Wysłane', sent: true },
+      { label: '4 · Błąd', error: true }
+    ].map((s) => ({
+      label: s.label,
+      empty: !!s.empty,
+      uploading: !!s.uploading,
+      sent: !!s.sent,
+      error: !!s.error,
+      notSent: !s.sent,
+      phoneOk: !s.error,
+      canSubmit: !!(s.empty || s.error)
+    }));
+    return { accent: this.props.accent ?? '#FF6B1A', states: states };
+  }
+}
+</script>
+</body>
+</html>

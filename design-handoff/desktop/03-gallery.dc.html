@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Desktop – Realizacje</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3D2B}a:hover{color:#14291D}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1100px; box-sizing: border-box; padding: 96px 80px 80px; display: flex; flex-direction: column; gap: 40px; font-family: Archivo, system-ui, sans-serif; color: #1B1B1B; background: #FFFFFF; overflow: hidden">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 620px">
+      <span style="font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5C4A33">Realizacje</span>
+      <h2 style="margin: 0; font-size: 48px; line-height: 1.05; font-weight: 800; letter-spacing: -0.015em; color: #14291D">Przed i po — nasze prace</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #3D3226">Tylko nasze zdjęcia, z naszych zleceń w [Miasto] i okolicy.</p>
+    </div>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end">
+      <button type="button" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 0; background: #1F3D2B; color: #FFFFFF; font: 700 15px Archivo, sans-serif; cursor: pointer">Wszystkie</button>
+      <button type="button" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CDBFA6; background: #FFFFFF; color: #1B1B1B; font: 600 15px Archivo, sans-serif; cursor: pointer">Wycinka</button>
+      <button type="button" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CDBFA6; background: #FFFFFF; color: #1B1B1B; font: 600 15px Archivo, sans-serif; cursor: pointer">Pielęgnacja</button>
+      <button type="button" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CDBFA6; background: #FFFFFF; color: #1B1B1B; font: 600 15px Archivo, sans-serif; cursor: pointer">Pniaki</button>
+      <button type="button" style="height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid #CDBFA6; background: #FFFFFF; color: #1B1B1B; font: 600 15px Archivo, sans-serif; cursor: pointer">Po wichurach</button>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 728px minmax(0, 1fr); gap: 40px; align-items: start">
+
+    <figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+      <div style="position: relative; height: 520px; border-radius: 16px; overflow: hidden">
+        <div style="position: absolute; inset: 0; background: repeating-linear-gradient(135deg, #DCE3D3 0 18px, #D1DAC6 18px 36px); display: flex; align-items: center; justify-content: flex-end; color: #2E4A36; font-size: 16px; font-weight: 600; text-align: center; padding: 0 60px">PO: to samo ujęcie — czysty dach, uporządkowany teren</div>
+        <span style="position: absolute; right: 16px; top: 16px; background: #1F3D2B; color: #FFFFFF; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 800">PO</span>
+        <div style="position: absolute; left: 0; top: 0; bottom: 0; width: {{beforeW}}; overflow: hidden">
+          <div style="width: 728px; height: 520px; background: repeating-linear-gradient(135deg, #CDBB9C 0 18px, #C3AF8E 18px 36px); display: flex; align-items: center; color: #3E3020; font-size: 16px; font-weight: 600; padding: 0 60px; box-sizing: border-box"><span style="max-width: 240px">PRZED: świerk ok. [15] m pochylony nad dachem</span></div>
+          <span style="position: absolute; left: 16px; top: 16px; background: #5C4A33; color: #FFFFFF; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 800">PRZED</span>
+        </div>
+        <div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: {{beforeW}}; width: 4px; margin-left: -2px; background: #FFFFFF; pointer-events: none"></div>
+        <div aria-hidden="true" style="position: absolute; top: 50%; left: {{beforeW}}; width: 56px; height: 56px; margin: -28px 0 0 -28px; border-radius: 50%; background: #FFFFFF; box-shadow: 0 2px 10px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; color: #1F3D2B; pointer-events: none">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 3 12 9 18"></polyline><polyline points="15 6 21 12 15 18"></polyline></svg>
+        </div>
+        <input type="range" min="0" max="100" value="{{pos}}" onChange="{{onSlide}}" aria-label="Porównaj zdjęcia przed i po" style="position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize">
+      </div>
+      <figcaption style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px">
+        <span style="font-size: 19px; font-weight: 800; color: #14291D">Wycinka sekcyjna świerka nad domem</span>
+        <span style="font-size: 15px; color: #5C4A33">[Miejscowość] · [miesiąc rok] · przeciągnij suwak</span>
+      </figcaption>
+    </figure>
+
+    <div style="display: flex; flex-direction: column; gap: 22px">
+      <article style="display: flex; flex-direction: column; gap: 8px">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px">
+          <div style="position: relative; height: 128px; border-radius: 10px 0 0 10px; background: repeating-linear-gradient(135deg, #CDBB9C 0 12px, #C3AF8E 12px 24px); display: flex; align-items: center; justify-content: center; color: #3E3020; font-size: 13px; font-weight: 600; text-align: center; padding: 0 12px">Brzozy przy ogrodzeniu<span style="position: absolute; left: 8px; top: 8px; background: #5C4A33; color: #FFFFFF; padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 800">PRZED</span></div>
+          <div style="position: relative; height: 128px; border-radius: 0 10px 10px 0; background: repeating-linear-gradient(135deg, #DCE3D3 0 12px, #D1DAC6 12px 24px); display: flex; align-items: center; justify-content: center; color: #2E4A36; font-size: 13px; font-weight: 600; text-align: center; padding: 0 12px">Teren po pracy<span style="position: absolute; left: 8px; top: 8px; background: #1F3D2B; color: #FFFFFF; padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 800">PO</span></div>
+        </div>
+        <span style="font-size: 16px; font-weight: 800; color: #14291D">Wycinka 3 brzóz przy płocie</span>
+        <span style="font-size: 14px; color: #5C4A33; margin-top: -6px">[Miejscowość] · ogród przydomowy</span>
+      </article>
+      <article style="display: flex; flex-direction: column; gap: 8px">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px">
+          <div style="position: relative; height: 128px; border-radius: 10px 0 0 10px; background: repeating-linear-gradient(135deg, #CDBB9C 0 12px, #C3AF8E 12px 24px); display: flex; align-items: center; justify-content: center; color: #3E3020; font-size: 13px; font-weight: 600; text-align: center; padding: 0 12px">Przerośnięta korona dębu<span style="position: absolute; left: 8px; top: 8px; background: #5C4A33; color: #FFFFFF; padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 800">PRZED</span></div>
+          <div style="position: relative; height: 128px; border-radius: 0 10px 10px 0; background: repeating-linear-gradient(135deg, #DCE3D3 0 12px, #D1DAC6 12px 24px); display: flex; align-items: center; justify-content: center; color: #2E4A36; font-size: 13px; font-weight: 600; text-align: center; padding: 0 12px">Korona po cięciu<span style="position: absolute; left: 8px; top: 8px; background: #1F3D2B; color: #FFFFFF; padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 800">PO</span></div>
+        </div>
+        <span style="font-size: 16px; font-weight: 800; color: #14291D">Cięcie odciążające starego dębu</span>
+        <span style="font-size: 14px; color: #5C4A33; margin-top: -6px">[Miejscowość] · drzewo zostało</span>
+      </article>
+      <article style="display: flex; flex-direction: column; gap: 8px">
+        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px">
+          <div style="position: relative; height: 128px; border-radius: 10px 0 0 10px; background: repeating-linear-gradient(135deg, #CDBB9C 0 12px, #C3AF8E 12px 24px); display: flex; align-items: center; justify-content: center; color: #3E3020; font-size: 13px; font-weight: 600; text-align: center; padding: 0 12px">Pniak w trawniku<span style="position: absolute; left: 8px; top: 8px; background: #5C4A33; color: #FFFFFF; padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 800">PRZED</span></div>
+          <div style="position: relative; height: 128px; border-radius: 0 10px 10px 0; background: repeating-linear-gradient(135deg, #DCE3D3 0 12px, #D1DAC6 12px 24px); display: flex; align-items: center; justify-content: center; color: #2E4A36; font-size: 13px; font-weight: 600; text-align: center; padding: 0 12px">Wyrównany grunt<span style="position: absolute; left: 8px; top: 8px; background: #1F3D2B; color: #FFFFFF; padding: 3px 8px; border-radius: 5px; font-size: 11px; font-weight: 800">PO</span></div>
+        </div>
+        <span style="font-size: 16px; font-weight: 800; color: #14291D">Frezowanie pniaka po topoli</span>
+        <span style="font-size: 14px; color: #5C4A33; margin-top: -6px">[Miejscowość] · gotowe pod trawnik</span>
+      </article>
+    </div>
+  </div>
+
+  <div style="flex-grow: 1"></div>
+
+  <a href="#realizacje" style="align-self: center; height: 56px; padding: 0 32px; border-radius: 12px; border: 2px solid #1F3D2B; display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 17px; box-sizing: border-box">
+    Zobacz wszystkie realizacje
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+  </a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const pos = this.state && this.state.pos != null ? this.state.pos : 50;
+    return {
+      pos: pos,
+      beforeW: pos + '%',
+      onSlide: (e) => this.setState({ pos: Number(e.target.value) })
+    };
+  }
+}
+</script>
+</body>
+</html>

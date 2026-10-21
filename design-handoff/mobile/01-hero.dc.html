@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Mobile – Hero A</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3D2B}a:hover{color:#14291D}
+</style>
+</helmet>
+<div style="width: 375px; height: 1000px; display: flex; flex-direction: column; font-family: Archivo, system-ui, sans-serif; color: #1B1B1B; background: #F5EFE4; overflow: hidden">
+
+  <header style="height: 64px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; background: #14291D; box-sizing: border-box">
+    <a href="#" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #FFFFFF">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E9DCC6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"></path><path d="M12 3c-3.5 0-6 2.6-6 5.5 0 .9.2 1.7.6 2.4A4 4 0 0 0 8 18h8a4 4 0 0 0 1.4-7.1c.4-.7.6-1.5.6-2.4C18 5.6 15.5 3 12 3z"></path></svg>
+      <span style="display: flex; flex-direction: column; line-height: 1.1">
+        <span style="font-weight: 800; font-size: 17px">[Nazwa Firmy]</span>
+        <span style="font-size: 12px; color: #E9DCC6">Arboryści · od [ROK]</span>
+      </span>
+    </a>
+    <a href="tel:600000000" aria-label="Zadzwoń 600 000 000" style="width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; background: {{accent}}; color: #1B1B1B">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+  </header>
+
+  <div style="position: relative; height: 290px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #4A3B28; text-align: center; padding: 0 32px; box-sizing: border-box">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+    <div style="font-size: 14px; font-weight: 600">ZDJĘCIE: ekipa przy pracy — arborysta na linie w koronie, drugi na ziemi</div>
+    <div style="position: absolute; left: 16px; bottom: -18px; background: #E9DCC6; color: #14291D; padding: 10px 14px; border-radius: 10px; font-weight: 800; font-size: 15px; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 0 rgba(20,41,29,0.15)">
+      <span style="font-size: 26px; line-height: 1">20+</span>
+      <span style="font-size: 12px; font-weight: 600; line-height: 1.15">lat<br>doświadczenia</span>
+    </div>
+  </div>
+
+  <section style="background: #1F3D2B; color: #FFFFFF; padding: 40px 16px 28px; display: flex; flex-direction: column; gap: 16px">
+    <div style="font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #E9DCC6">Wycinka drzew · [Miasto] i okolice</div>
+    <h1 style="margin: 0; font-size: 34px; line-height: 1.08; font-weight: 800; letter-spacing: -0.01em">Bezpieczna wycinka drzew. Nawet tam, gdzie jest ciasno.</h1>
+    <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #EDE4D3">Przy domu, przy płocie, przy liniach. Przyjedziemy, obejrzymy i wycenimy za darmo — po pracy zostawiamy porządek.</p>
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 8px">
+      <a href="tel:600000000" style="height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 12px; background: {{accent}}; color: #1B1B1B; text-decoration: none; font-weight: 800; font-size: 20px">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        Zadzwoń: 600 000 000
+      </a>
+      <a href="#formularz" style="height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; border: 2px solid #E9DCC6; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 16px; box-sizing: border-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        Wyślij zdjęcie drzewa — wycena
+      </a>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #E9DCC6">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      Odbieramy [pn–sob, 7:00–19:00]
+    </div>
+  </section>
+
+  <div style="flex-grow: 1; background: #F5EFE4; padding: 24px 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; align-content: start">
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; color: #1F3D2B">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #1B1B1B">20+ lat<br>w zawodzie</span>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; color: #1F3D2B">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+      <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #1B1B1B">Ubezpieczenie<br>OC</span>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; color: #1F3D2B">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span style="font-size: 13px; font-weight: 700; line-height: 1.25; color: #1B1B1B">Sprzątamy<br>po sobie</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF6B1A","options":["#FF6B1A","#FFC20E"]},"$preview":{"width":375,"height":1000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#FF6B1A' };
+  }
+}
+</script>
+</body>
+</html>

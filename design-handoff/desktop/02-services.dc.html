@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Desktop – Usługi</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3D2B}a:hover{color:#14291D}
+</style>
+</helmet>
+<div style="width: 1440px; height: 1340px; box-sizing: border-box; padding: 96px 80px 80px; display: flex; flex-direction: column; gap: 40px; font-family: Archivo, system-ui, sans-serif; color: #1B1B1B; background: #F5EFE4; overflow: hidden">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px">
+      <span style="font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5C4A33">Usługi</span>
+      <h2 style="margin: 0; font-size: 48px; line-height: 1.05; font-weight: 800; letter-spacing: -0.015em; color: #14291D">W czym pomagamy</h2>
+      <p style="margin: 0; font-size: 18px; line-height: 1.55; color: #3D3226">Od jednego drzewa w ogrodzie po wycinkę całej działki. Własny sprzęt, własna ekipa.</p>
+    </div>
+    <a href="#cennik" style="min-height: 48px; display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px">
+      Zobacz cennik
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </a>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+
+    <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 16px; overflow: hidden">
+      <div style="height: 210px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; align-items: center; justify-content: center; color: #4A3B28; font-size: 14px; font-weight: 600; text-align: center; padding: 0 32px">FOTO: ścinka sekcyjna przy domu</div>
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; color: #14291D">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22v-7"></path><path d="M12 3c-3.5 0-6 2.6-6 5.5 0 .9.2 1.7.6 2.4A4 4 0 0 0 8 18h8a4 4 0 0 0 1.4-7.1c.4-.7.6-1.5.6-2.4C18 5.6 15.5 3 12 3z"></path></svg>
+          Wycinka drzew
+        </h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">W całości, gdy jest miejsce — albo kawałek po kawałku na linach, przy domu, płocie i dachu.</p>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 16px; overflow: hidden">
+      <div style="height: 210px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; align-items: center; justify-content: center; color: #4A3B28; font-size: 14px; font-weight: 600; text-align: center; padding: 0 32px">FOTO: alpinista w koronie przy linii energetycznej</div>
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; color: #14291D">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          Trudne miejsca
+        </h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Drzewa przy liniach, budynkach i na skarpach. Technika alpinistyczna lub podnośnik.</p>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 16px; overflow: hidden">
+      <div style="height: 210px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; align-items: center; justify-content: center; color: #4A3B28; font-size: 14px; font-weight: 600; text-align: center; padding: 0 32px">FOTO: cięcie korony, zbliżenie na pilarkę</div>
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; color: #14291D">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
+          Pielęgnacja koron
+        </h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Cięcia sanitarne, odciążające i formujące. Drzewo zostaje — zdrowe i bezpieczne.</p>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 16px; overflow: hidden">
+      <div style="height: 210px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; align-items: center; justify-content: center; color: #4A3B28; font-size: 14px; font-weight: 600; text-align: center; padding: 0 32px">FOTO: frezarka przy pniu, trociny</div>
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; color: #14291D">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="8" rx="8" ry="3"></ellipse><path d="M4 8v8c0 1.7 3.6 3 8 3s8-1.3 8-3V8"></path></svg>
+          Frezowanie pniaków
+        </h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Usuwamy pień poniżej poziomu gruntu. Można siać trawę albo budować.</p>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 16px; overflow: hidden">
+      <div style="height: 210px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; align-items: center; justify-content: center; color: #4A3B28; font-size: 14px; font-weight: 600; text-align: center; padding: 0 32px">FOTO: rębak przy pracy, firmowe auto</div>
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; color: #14291D">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          Rębakowanie i wywóz
+        </h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Gałęzie mielimy na miejscu. Drewno zabieramy albo zostawiamy pocięte na opał.</p>
+      </div>
+    </article>
+
+    <article style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E2D6C2; border-radius: 16px; overflow: hidden">
+      <div style="height: 210px; background: repeating-linear-gradient(135deg, #D6C8AE 0 14px, #CFC0A4 14px 28px); display: flex; align-items: center; justify-content: center; color: #4A3B28; font-size: 14px; font-weight: 600; text-align: center; padding: 0 32px">FOTO: drzewo złamane po wichurze</div>
+      <div style="padding: 22px 24px 26px; display: flex; flex-direction: column; gap: 10px">
+        <h3 style="margin: 0; display: flex; align-items: center; gap: 10px; font-size: 21px; font-weight: 800; color: #14291D">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1F3D2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+          Po wichurach
+        </h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3D3226">Złamane i przewrócone drzewa. Przyjeżdżamy szybko i zabezpieczamy teren.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 40px; background: #1F3D2B; color: #FFFFFF; border-radius: 18px; padding: 28px 36px">
+    <div style="display: flex; align-items: center; gap: 18px">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#E9DCC6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 36px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+      <div style="display: flex; flex-direction: column; gap: 4px">
+        <span style="font-size: 22px; font-weight: 800">Nie wiesz, czego potrzebujesz? Formalności też ogarniemy.</span>
+        <span style="font-size: 16px; color: #EDE4D3">Doradzimy, czy potrzebne jest zgłoszenie wycinki w gminie, i podamy orientacyjną cenę.</span>
+      </div>
+    </div>
+    <a href="tel:600000000" style="flex-shrink: 0; height: 60px; padding: 0 28px; border-radius: 12px; display: flex; align-items: center; gap: 12px; background: {{accent}}; color: #1B1B1B; text-decoration: none; font-weight: 800; font-size: 19px">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      600 000 000
+    </a>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF6B1A","options":["#FF6B1A","#FFC20E"]},"$preview":{"width":1440,"height":1340}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#FF6B1A' };
+  }
+}
+</script>
+</body>
+</html>

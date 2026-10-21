@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Mobile – Pasek sticky</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#1F3D2B}a:hover{color:#14291D}
+</style>
+</helmet>
+<div style="position: relative; width: 375px; height: 760px; font-family: Archivo, system-ui, sans-serif; color: #1B1B1B; background: #F5EFE4; overflow: hidden">
+
+  <div aria-hidden="true" style="padding: 28px 16px; display: flex; flex-direction: column; gap: 12px; opacity: 0.55">
+    <span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #5C4A33">Treść strony przewija się pod paskiem</span>
+    <div style="height: 30px; width: 70%; border-radius: 6px; background: #CDBFA6"></div>
+    <div style="height: 14px; width: 92%; border-radius: 4px; background: #DCCFB8"></div>
+    <div style="height: 14px; width: 80%; border-radius: 4px; background: #DCCFB8"></div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin-top: 8px">
+      <div style="height: 150px; border-radius: 10px; background: repeating-linear-gradient(135deg, #CDBB9C 0 12px, #C3AF8E 12px 24px)"></div>
+      <div style="height: 150px; border-radius: 10px; background: repeating-linear-gradient(135deg, #DCE3D3 0 12px, #D1DAC6 12px 24px)"></div>
+    </div>
+    <div style="height: 120px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E2D6C2"></div>
+    <div style="height: 120px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E2D6C2"></div>
+    <div style="height: 120px; border-radius: 14px; background: #FFFFFF; border: 1px solid #E2D6C2"></div>
+  </div>
+
+  <nav aria-label="Szybki kontakt" style="position: absolute; left: 0; right: 0; bottom: 0; background: #FFFFFF; border-top: 1px solid #E2D6C2; box-shadow: 0 -6px 20px rgba(20,41,29,0.12); padding: 8px 12px 20px; display: flex; flex-direction: column; gap: 8px">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 12px; font-weight: 600; color: #3D3226">
+      <span style="width: 8px; height: 8px; border-radius: 50%; background: #2E7D32"></span>
+      Odbieramy teraz · do [19:00]
+    </div>
+    <div style="display: flex; gap: 8px">
+      <a href="tel:600000000" style="flex: 1.7 1 0; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 10px; background: {{accent}}; color: #1B1B1B; text-decoration: none; font-weight: 800; font-size: 17px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        600 000 000
+      </a>
+      <a href="#formularz" style="flex: 1 1 0; height: 56px; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; background: #1F3D2B; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        Zdjęcie
+      </a>
+    </div>
+  </nav>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FF6B1A","options":["#FF6B1A","#FFC20E"]},"$preview":{"width":375,"height":760}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#FF6B1A' };
+  }
+}
+</script>
+</body>
+</html>
