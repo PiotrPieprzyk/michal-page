@@ -145,7 +145,6 @@ if (ghToken && token) {
         "X-GitHub-Api-Version": "2022-11-28",
       },
       includeDrafts: false,
-      isDisabled: false,
     }),
   });
   if (res.ok) console.log("Webhook created.");

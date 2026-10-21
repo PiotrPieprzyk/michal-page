@@ -9,6 +9,8 @@ export const ENV_FILE = path.join(ROOT, ".env");
 
 /** Runs a command, streaming output. Returns stdout when `capture` is set. */
 export function run(cmd, args, { cwd = ROOT, capture = false, env = {}, allowFail = false } = {}) {
+  // With shell:true (Windows) args are joined unquoted, so quote the ones containing spaces.
+  if (process.platform === "win32") args = args.map((a) => (/\s/.test(a) ? `"${a}"` : a));
   const res = spawnSync(cmd, args, {
     cwd,
     stdio: capture ? ["inherit", "pipe", "inherit"] : "inherit",

@@ -4,7 +4,6 @@
 /* deno-fmt-ignore-file */
 /* biome-ignore-all lint: auto-generated */
 
-import "sst"
 declare module "sst" {
   export interface Resource {
     "AlertEmail": {
@@ -14,6 +13,11 @@ declare module "sst" {
     "Alerts": {
       "arn": string
       "type": "sst.aws.SnsTopic"
+    }
+    "Recipient": {
+      "configSet": string
+      "sender": string
+      "type": "sst.aws.Email"
     }
     "RecipientEmail": {
       "type": "sst.sst.Secret"
@@ -49,4 +53,5 @@ declare module "sst" {
   }
 }
 
+import "sst"
 export {}

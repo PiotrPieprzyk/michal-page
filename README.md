@@ -24,8 +24,20 @@ Sanity publish ──webhook──► GitHub repository_dispatch ──► Actio
 
 `scripts/sst.mjs` loads `.env` and maps `CLOUD_FLARE_TOKEN` → `CLOUDFLARE_API_TOKEN` before calling the SST CLI.
 
+## AWS credentials
+
+SST deploys with the AWS profile `michal-page`. `scripts/sst.mjs` exports that profile's `aws login` session as env credentials (SST's bundled SDK cannot read `aws login` profiles directly, so `providers.aws.profile` in `sst.config.ts` does not work). Create the profile once (and repeat when the session expires):
+
+```
+aws login --profile michal-page
+aws sts get-caller-identity --profile michal-page   # verify
+```
+
+Without it, `npm run deploy` fails with "AWS credentials are not configured". To use another profile, set `AWS_PROFILE` or edit the default in `scripts/sst.mjs`. CI does not use the profile; it assumes the GitHub OIDC role.
+
 ## First-time setup (in this order)
 
+0. **AWS login** (see above): `aws login --profile michal-page`
 1. **Deploy production**: `npm run deploy`
    - Creates the site, the bucket, both Lambdas, SES (domain DKIM in Cloudflare), alarms, the $2 budget and the GitHub OIDC role.
    - **Check your inbox** (`piotr.pieprzyk.pp+michalpage@gmail.com`) and click:
@@ -46,6 +58,7 @@ Sanity publish ──webhook──► GitHub repository_dispatch ──► Actio
 | Name | Where | Notes |
 |---|---|---|
 | `CLOUD_FLARE_TOKEN` | `.env` | Zone DNS edit on piotrpieprzyk.com |
+| `CLOUDFLARE_DEFAULT_ACCOUNT_ID` | `.env` | needed because the token has no account-read rights; also required in CI |
 | `POSTHOG_PROJECT_TOKEN` | `.env` | public key, EU cloud |
 | `SANITY_PROJECT_ID`, `SANITY_DATASET` | `.env` (written by setup-sanity) | |
 | `TURNSTILE_SITE_KEY` | `.env` (written by setup-turnstile) | public |

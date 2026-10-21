@@ -18,6 +18,7 @@ export default $config({
         cloudflare: "6.23.1",
         random: "4.21.4",
       },
+
     };
   },
   async run() {
