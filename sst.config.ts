@@ -124,7 +124,12 @@ export default $config({
       build: { command: "npm run build", output: "out" },
       dev: { command: "npm run dev", url: "http://localhost:3000" },
       domain: isProd ? { name: DOMAIN, dns: sst.cloudflare.dns() } : undefined,
-      errorPage: "404.html",
+      // Not `errorPage`: it adds CloudFront custom error responses, which fetch the
+      // page from the placeholder origin (the router function doesn't run for them)
+      // and turn every unknown URL into a 502. `indexPage` is only used by the
+      // router's fallback for unmatched paths, so this serves 404.html from S3
+      // (with status 200). "/" still resolves to index.html via the KV lookup.
+      indexPage: "404.html",
       environment: {
         NEXT_PUBLIC_SITE_URL: siteUrl,
         NEXT_PUBLIC_UPLOAD_URL: uploadFn.url,
