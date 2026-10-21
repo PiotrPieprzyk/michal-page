@@ -1,0 +1,317 @@
+{
+  "settings": {
+    "companyName": "[Nazwa Firmy]",
+    "foundingYear": "[ROK]",
+    "city": "[Miasto]",
+    "phone": "600 000 000",
+    "email": "[kontakt@twojadomena.pl]",
+    "address": "[ul. Przykładowa 1, 00-000 Miasto]",
+    "nip": "[000-000-00-00]",
+    "hoursText": "[Pn–Sob 7:00–19:00]",
+    "openingDays": ["Mo", "Tu", "We", "Th", "Fr", "Sa"],
+    "opensAt": "07:00",
+    "closesAt": "19:00",
+    "closingHourText": "[19:00]",
+    "radiusKm": "[50]",
+    "callbackPromise": "[tego samego dnia roboczego]",
+    "areaServed": ["[Miejscowość]", "[Miejscowość]", "[Miejscowość]", "[Miejscowość]", "[Miejscowość]"],
+    "seoTitle": "Wycinka drzew {miasto} — {firma} | 20+ lat doświadczenia",
+    "seoDescription": "Bezpieczna wycinka i pielęgnacja drzew w {miasto} i okolicy do {promien} km. Wycena na miejscu i dojazd gratis — wyślij zdjęcie drzewa albo zadzwoń: {telefon}.",
+    "ogImage": null
+  },
+  "header": {
+    "tagline": "Arboryści · od {rok}",
+    "nav": [
+      { "label": "Usługi", "href": "#uslugi" },
+      { "label": "Realizacje", "href": "#realizacje" },
+      { "label": "Cennik", "href": "#cennik" },
+      { "label": "Kontakt", "href": "#kontakt" }
+    ],
+    "stickyNav": [
+      { "label": "Usługi", "href": "#uslugi" },
+      { "label": "Realizacje", "href": "#realizacje" },
+      { "label": "Cennik", "href": "#cennik" },
+      { "label": "Wycena", "href": "#formularz" }
+    ],
+    "callLabel": "Zadzwoń",
+    "callAriaLabel": "Zadzwoń {telefon}",
+    "stickyStatus": "Odbieramy teraz"
+  },
+  "hero": {
+    "eyebrow": "Wycinka drzew · {miasto} i okolice",
+    "heading": "Bezpieczna wycinka drzew. Nawet tam, gdzie jest ciasno.",
+    "lead": "Przy domu, przy płocie, przy liniach. Przyjedziemy, obejrzymy i wycenimy za darmo — po pracy zostawiamy porządek.",
+    "callLabelMobile": "Zadzwoń: {telefon}",
+    "callLabelDesktop": "{telefon}",
+    "photoCtaMobile": "Wyślij zdjęcie drzewa — wycena",
+    "photoCtaDesktop": "Wyślij zdjęcie drzewa",
+    "hoursLine": "Odbieramy {godziny}",
+    "badgeValue": "20+",
+    "badgeLabel": "lat\ndoświadczenia",
+    "image": {
+      "image": null,
+      "alt": "Arborysta na linie w koronie drzewa, drugi członek ekipy asekuruje z ziemi",
+      "placeholderLabel": "ZDJĘCIE: ekipa przy pracy — arborysta na linie w koronie, drugi na ziemi, firmowe auto w tle"
+    }
+  },
+  "trust": {
+    "items": [
+      { "icon": "clock", "label": "20+ lat\nw zawodzie", "hideOnMobile": false },
+      { "icon": "shield", "label": "Ubezpieczenie\nOC", "hideOnMobile": false },
+      { "icon": "truck", "label": "Własny sprzęt\ni ekipa", "hideOnMobile": true },
+      { "icon": "check", "label": "Sprzątamy\npo sobie", "hideOnMobile": false }
+    ]
+  },
+  "services": {
+    "eyebrow": "Usługi",
+    "heading": "W czym pomagamy",
+    "lead": "Od jednego drzewa w ogrodzie po wycinkę całej działki. Własny sprzęt, własna ekipa.",
+    "pricingLinkLabel": "Zobacz cennik",
+    "cards": [
+      {
+        "icon": "tree",
+        "title": "Wycinka drzew",
+        "text": "W całości, gdy jest miejsce — albo kawałek po kawałku na linach, przy domu, płocie i dachu.",
+        "image": { "image": null, "alt": "Sekcyjna ścinka drzewa przy domu", "placeholderLabel": "FOTO: ścinka sekcyjna przy domu" }
+      },
+      {
+        "icon": "alert-triangle",
+        "title": "Trudne miejsca",
+        "text": "Drzewa przy liniach, budynkach i na skarpach. Technika alpinistyczna lub podnośnik.",
+        "image": { "image": null, "alt": "Arborysta w koronie drzewa przy linii energetycznej", "placeholderLabel": "FOTO: alpinista w koronie przy linii energetycznej" }
+      },
+      {
+        "icon": "scissors",
+        "title": "Pielęgnacja koron",
+        "text": "Cięcia sanitarne, odciążające i formujące. Drzewo zostaje — zdrowe i bezpieczne.",
+        "image": { "image": null, "alt": "Cięcie korony drzewa pilarką", "placeholderLabel": "FOTO: cięcie korony, zbliżenie na pilarkę" }
+      },
+      {
+        "icon": "cylinder",
+        "title": "Frezowanie pniaków",
+        "text": "Usuwamy pień poniżej poziomu gruntu. Można siać trawę albo budować.",
+        "image": { "image": null, "alt": "Frezarka do pni przy pracy", "placeholderLabel": "FOTO: frezarka przy pniu, trociny" }
+      },
+      {
+        "icon": "truck",
+        "title": "Rębakowanie i wywóz",
+        "text": "Gałęzie mielimy na miejscu. Drewno zabieramy albo zostawiamy pocięte na opał.",
+        "image": { "image": null, "alt": "Rębak mielący gałęzie obok firmowego auta", "placeholderLabel": "FOTO: rębak przy pracy, firmowe auto" }
+      },
+      {
+        "icon": "wind",
+        "title": "Po wichurach",
+        "text": "Złamane i przewrócone drzewa. Przyjeżdżamy szybko i zabezpieczamy teren.",
+        "image": { "image": null, "alt": "Drzewo złamane po wichurze", "placeholderLabel": "FOTO: drzewo złamane po wichurze" }
+      }
+    ],
+    "permitsStrong": "Formalności też ogarniemy.",
+    "permitsText": "Podpowiemy, czy potrzebne jest zgłoszenie wycinki w gminie, i pomożemy je przygotować.",
+    "ctaMobileTitle": "Nie wiesz, czego potrzebujesz?",
+    "ctaMobileText": "Zadzwoń albo wyślij zdjęcie drzewa — doradzimy i podamy orientacyjną cenę.",
+    "ctaDesktopTitle": "Nie wiesz, czego potrzebujesz? Formalności też ogarniemy.",
+    "ctaDesktopText": "Doradzimy, czy potrzebne jest zgłoszenie wycinki w gminie, i podamy orientacyjną cenę.",
+    "ctaCallLabel": "{telefon}"
+  },
+  "gallery": {
+    "eyebrow": "Realizacje",
+    "heading": "Przed i po — nasze prace",
+    "lead": "Tylko nasze zdjęcia, z naszych zleceń w {miasto} i okolicy.",
+    "filters": [
+      { "value": "all", "label": "Wszystkie" },
+      { "value": "wycinka", "label": "Wycinka" },
+      { "value": "pielegnacja", "label": "Pielęgnacja" },
+      { "value": "pniaki", "label": "Pniaki" },
+      { "value": "wichury", "label": "Po wichurach" }
+    ],
+    "beforeLabel": "PRZED",
+    "afterLabel": "PO",
+    "sliderAriaLabel": "Porównaj zdjęcia przed i po",
+    "sliderHintMobile": "przesuń suwak, aby porównać",
+    "sliderHintDesktop": "przeciągnij suwak",
+    "moreLabelMobile": "Zobacz więcej realizacji",
+    "moreLabelDesktop": "Zobacz wszystkie realizacje",
+    "moreUrl": "",
+    "emptyText": "W tej kategorii nie mamy jeszcze zdjęć. Zobacz wszystkie realizacje.",
+    "items": [
+      {
+        "title": "Wycinka sekcyjna świerka nad domem",
+        "category": "wycinka",
+        "location": "[Miejscowość]",
+        "detail": "[miesiąc rok]",
+        "before": { "image": null, "alt": "Przed: wysoki świerk pochylony nad dachem domu", "placeholderLabel": "PRZED: świerk ok. [15] m pochylony nad dachem" },
+        "after": { "image": null, "alt": "Po: to samo ujęcie — czysty dach i uporządkowany teren", "placeholderLabel": "PO: to samo ujęcie — czysty dach, uporządkowany teren" }
+      },
+      {
+        "title": "Wycinka 3 brzóz przy płocie",
+        "category": "wycinka",
+        "location": "[Miejscowość]",
+        "detail": "ogród przydomowy",
+        "before": { "image": null, "alt": "Przed: brzozy przy ogrodzeniu", "placeholderLabel": "Brzozy przy ogrodzeniu" },
+        "after": { "image": null, "alt": "Po: teren po wycince brzóz", "placeholderLabel": "Teren po pracy" }
+      },
+      {
+        "title": "Cięcie odciążające starego dębu",
+        "category": "pielegnacja",
+        "location": "[Miejscowość]",
+        "detail": "drzewo zostało",
+        "before": { "image": null, "alt": "Przed: przerośnięta korona dębu", "placeholderLabel": "Przerośnięta korona dębu" },
+        "after": { "image": null, "alt": "Po: korona dębu po cięciu", "placeholderLabel": "Korona po cięciu" }
+      },
+      {
+        "title": "Frezowanie pniaka po topoli",
+        "category": "pniaki",
+        "location": "[Miejscowość]",
+        "detail": "gotowe pod trawnik",
+        "before": { "image": null, "alt": "Przed: pniak w trawniku", "placeholderLabel": "Pniak w trawniku" },
+        "after": { "image": null, "alt": "Po: wyrównany grunt po frezowaniu", "placeholderLabel": "Wyrównany grunt" }
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Cennik",
+    "heading": "Orientacyjne ceny",
+    "lead": "Każde drzewo jest inne. Dokładną cenę podajemy po obejrzeniu albo na podstawie zdjęć — bezpłatnie.",
+    "captionMobile": "Usługa · cena od",
+    "colService": "Usługa",
+    "colScope": "Zakres / jednostka",
+    "colPrice": "Cena",
+    "rows": [
+      { "service": "Wycinka drzewa do 10 m", "scope": "iglaki, owocowe, małe liściaste", "price": "od [___] zł", "priceMobile": "", "free": false },
+      { "service": "Wycinka drzewa 10–20 m", "scope": "średnie i duże drzewa", "price": "od [___] zł", "priceMobile": "", "free": false },
+      { "service": "Wycinka sekcyjna / alpinistyczna", "scope": "przy domu, liniach, na skarpie", "price": "wycena indywidualna", "priceMobile": "wycena\nindywid.", "free": false },
+      { "service": "Cięcie pielęgnacyjne korony", "scope": "za drzewo", "price": "od [___] zł", "priceMobile": "", "free": false },
+      { "service": "Frezowanie pniaka", "scope": "za cm średnicy", "price": "od [__] zł", "priceMobile": "", "free": false },
+      { "service": "Rębakowanie gałęzi", "scope": "za godzinę pracy", "price": "od [___] zł", "priceMobile": "", "free": false },
+      { "service": "Wywóz drewna i gałęzi", "scope": "za kurs", "price": "od [___] zł", "priceMobile": "", "free": false },
+      { "service": "Wycena na miejscu", "scope": "bez zobowiązań", "price": "0 zł", "priceMobile": "", "free": true },
+      { "service": "Dojazd do {promien} km", "scope": "od {miasto}", "price": "0 zł", "priceMobile": "", "free": true }
+    ],
+    "vatNote": "Ceny [brutto, z VAT]. Drewno może zostać u Ciebie — pocięte na opał.",
+    "factorsTitle": "Co wpływa na cenę?",
+    "factors": [
+      "Wysokość i grubość drzewa",
+      "Dojazd — czy wjedzie podnośnik",
+      "Przeszkody: dach, linie, ogrodzenie",
+      "Czy zabieramy drewno i gałęzie"
+    ],
+    "ctaMobileCall": "Zadzwoń po wycenę",
+    "ctaMobileLink": "lub wyślij zdjęcie do wyceny",
+    "ctaCardTitle": "Dokładna cena w jednej rozmowie",
+    "ctaCardText": "Opisz drzewo przez telefon albo wyślij zdjęcie — podamy konkretną kwotę.",
+    "ctaCardCall": "{telefon}",
+    "ctaCardLink": "lub wyślij zdjęcie"
+  },
+  "form": {
+    "eyebrow": "Bezpłatna wycena",
+    "headingMobile": "Wyślij zdjęcie drzewa",
+    "headingDesktop": "Wyślij zdjęcie drzewa — wycenimy za darmo",
+    "leadMobile": "Zrób 2–3 zdjęcia: całe drzewo i to, co wokół niego. Oddzwonimy z wyceną.",
+    "steps": [
+      { "title": "Zrób 2–3 zdjęcia", "text": "Całe drzewo i to, co wokół niego: dom, płot, linie." },
+      { "title": "Wyślij formularz", "text": "Wystarczy telefon i miejscowość." },
+      { "title": "Oddzwonimy z ceną", "text": "{Termin_oddzwonienia} — bez zobowiązań." }
+    ],
+    "talkLabelMobile": "Wolisz porozmawiać?",
+    "talkLabelDesktop": "Wolisz porozmawiać? Odbiera właściciel.",
+    "nameLabel": "Imię",
+    "namePlaceholder": "np. Jan",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "np. 600 000 000",
+    "phoneError": "Podaj numer — inaczej nie oddzwonimy.",
+    "cityLabel": "Miejscowość",
+    "cityPlaceholder": "np. [Miejscowość]",
+    "descLabel": "Opis",
+    "optionalLabel": "(opcjonalnie)",
+    "descPlaceholder": "np. świerk ok. 15 m, rośnie 3 m od domu",
+    "photosLabel": "Zdjęcia drzewa",
+    "dropTitleMobile": "Dodaj zdjęcia drzewa",
+    "dropTitleDesktop": "Przeciągnij zdjęcia tutaj",
+    "limitsMobile": "Zrób zdjęcie lub wybierz z galerii · do 5 zdjęć · JPG, PNG, HEIC · max 10 MB",
+    "limitsDesktop": "do 5 zdjęć · JPG, PNG, HEIC · max 10 MB każde",
+    "pickLabel": "Wybierz zdjęcia",
+    "addMoreLabel": "+ Dodaj",
+    "readyOne": "{n} zdjęcie gotowe",
+    "readyFew": "{n} zdjęcia gotowe",
+    "readyMany": "{n} zdjęć gotowych",
+    "statusDone": "Gotowe",
+    "statusQueued": "W kolejce",
+    "statusCompressing": "Przygotowujemy…",
+    "cancelAria": "Anuluj wysyłanie",
+    "removeAria": "Usuń zdjęcie",
+    "failedSuffix": "— nie wysłano",
+    "retryLabel": "Spróbuj ponownie",
+    "removeLabel": "Usuń plik",
+    "errorTooLarge": "Plik jest za duży ({rozmiar}). Maksymalnie 10 MB — zrób zdjęcie jeszcze raz lub wybierz mniejsze.",
+    "errorBadType": "Nieobsługiwany format pliku. Wyślij zdjęcie JPG, PNG lub HEIC.",
+    "errorTooMany": "Możesz dodać maksymalnie 5 zdjęć.",
+    "errorUpload": "Nie udało się wysłać pliku. Sprawdź połączenie i spróbuj ponownie.",
+    "errorSubmit": "Nie udało się wysłać zgłoszenia. Spróbuj ponownie albo zadzwoń: {telefon}.",
+    "consentText": "Zgadzam się na kontakt w sprawie wyceny. Dane przetwarzamy zgodnie z",
+    "consentLinkLabel": "polityką prywatności",
+    "consentError": "Zaznacz zgodę — bez niej nie możemy oddzwonić.",
+    "submitLabel": "Wyślij zgłoszenie",
+    "submittingLabel": "Wysyłamy zgłoszenie…",
+    "uploadingLabel": "Czekaj, wysyłamy zdjęcia…",
+    "turnstileError": "Potwierdź, że nie jesteś robotem, i spróbuj ponownie.",
+    "sentHeading": "Dziękujemy! Zgłoszenie wysłane.",
+    "sentText": "Mamy Twoje {liczba_zdjec}. Oddzwonimy z wyceną {termin_oddzwonienia}.",
+    "sentTextNoPhotos": "Mamy Twoje zgłoszenie. Oddzwonimy z wyceną {termin_oddzwonienia}.",
+    "photoWordOne": "zdjęcie",
+    "photoWordFew": "zdjęcia",
+    "photoWordMany": "zdjęć",
+    "sentNumberLabel": "na numer:",
+    "sentPhotosHeading": "Wysłane zdjęcia",
+    "urgentLabelMobile": "Pilne? Zadzwoń teraz",
+    "urgentLabelDesktop": "Pilne? {telefon}",
+    "resetLabel": "Wyślij kolejne zgłoszenie"
+  },
+  "footer": {
+    "ctaTitle": "Masz drzewo do wycięcia?",
+    "ctaText": "Wycena jest bezpłatna. Odbiera właściciel.",
+    "description": "Rodzinna firma arborystyczna. Wycinamy i pielęgnujemy drzewa w {miasto} i okolicy od ponad 20 lat.",
+    "phoneLabelMobile": "Telefon — odbiera właściciel",
+    "callLabel": "Zadzwoń",
+    "contactHeading": "Kontakt",
+    "emailLabel": "E-mail",
+    "addressLabel": "Adres",
+    "hoursLabel": "Godziny",
+    "hoursExtra": "awarie po wichurach 7 dni",
+    "areaHeading": "Obszar działania",
+    "areaLine": "{miasto} i okolice do {promien} km",
+    "navHeading": "Na stronie",
+    "nav": [
+      { "label": "Usługi", "href": "#uslugi" },
+      { "label": "Realizacje", "href": "#realizacje" },
+      { "label": "Cennik", "href": "#cennik" },
+      { "label": "Wycena", "href": "#formularz" }
+    ],
+    "copyright": "© {rok_biezacy} {firma} · NIP {nip}",
+    "privacyLabel": "Polityka prywatności"
+  },
+  "stickyBar": {
+    "ariaLabel": "Szybki kontakt",
+    "onlineLine": "Odbieramy teraz · do {godzina_zamkniecia}",
+    "offlineLine": "Zostaw zdjęcie — oddzwonimy rano",
+    "photoLabel": "Zdjęcie",
+    "swapOffHours": false
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "body": [
+      "[Szablon do uzupełnienia i weryfikacji przez właściciela firmy przed publikacją.]",
+      "## Administrator danych",
+      "Administratorem Twoich danych osobowych jest {firma}, {adres}, NIP {nip}. Kontakt: {telefon}, {email}.",
+      "## Jakie dane i po co",
+      "Przez formularz wyceny zbieramy: imię, numer telefonu, miejscowość, opis i zdjęcia drzewa. Używamy ich wyłącznie po to, by przygotować wycenę i oddzwonić (art. 6 ust. 1 lit. b RODO — działania przed zawarciem umowy, na Twoje żądanie).",
+      "## Jak długo",
+      "Zdjęcia przesłane przez formularz są automatycznie usuwane z naszego serwera po 30 dniach. Wiadomość ze zgłoszeniem przechowujemy do czasu zakończenia sprawy, a jeśli zawrzemy umowę — przez okres wymagany przepisami.",
+      "## Komu przekazujemy dane",
+      "Dane są przetwarzane na serwerach Amazon Web Services (region UE — Frankfurt). Nie sprzedajemy ani nie udostępniamy danych innym firmom.",
+      "## Statystyki",
+      "Strona korzysta z PostHog (serwery w UE) w trybie bez plików cookie, aby liczyć odwiedziny i kliknięcia. Nie zapisujemy plików cookie ani nie tworzymy profili użytkowników. Formularz chroni Cloudflare Turnstile przed spamem.",
+      "## Twoje prawa",
+      "Masz prawo do dostępu do danych, ich poprawienia, usunięcia, ograniczenia przetwarzania i wniesienia sprzeciwu, a także do skargi do Prezesa UODO. Napisz lub zadzwoń — usuniemy dane od ręki."
+    ]
+  }
+}

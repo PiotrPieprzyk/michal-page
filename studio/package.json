@@ -1,0 +1,23 @@
+{
+  "name": "michal-page-studio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy",
+    "seed": "node scripts/build-seed.mjs && sanity dataset import seed.ndjson production --replace",
+    "typegen": "sanity schema extract && sanity typegen generate"
+  },
+  "dependencies": {
+    "@sanity/vision": "6.20.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "sanity": "6.20.0",
+    "styled-components": "6.6.0"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
