@@ -1,10 +1,10 @@
 import type { HeaderContent, SiteSettings } from "@/content/types";
 import { fill, telHref } from "@/content/tokens";
 import { CallButton } from "@/components/ui/Button";
-import { Icon } from "@/components/ui/Icon";
 import { Logo } from "@/components/ui/Logo";
+import { MobileMenu } from "./MobileMenu";
 
-/** Main header: 64px on mobile (logo + square call button), 84px on desktop. */
+/** Main header: 64px below lg (logo + hamburger; calling lives in the drawer), 84px on desktop. */
 export function Header({ content, settings }: { content: HeaderContent; settings: SiteSettings }) {
   const tel = telHref(settings.phone);
   return (
@@ -24,8 +24,8 @@ export function Header({ content, settings }: { content: HeaderContent; settings
           </ul>
         </nav>
 
-        <div className="flex items-center gap-5">
-          <div className="hidden flex-col items-end leading-[1.15] md:flex">
+        <div className="flex items-center gap-2 lg:gap-5">
+          <div className="hidden flex-col items-end leading-[1.15] lg:flex">
             <span className="text-xs text-beige-200">{settings.hoursText}</span>
             <a href={tel} data-call="header" className="text-xl font-extrabold text-white no-underline hover:text-beige-200">
               {settings.phone}
@@ -35,18 +35,18 @@ export function Header({ content, settings }: { content: HeaderContent; settings
             href={tel}
             track="header"
             iconSize={20}
-            className="hidden h-[52px] rounded-[10px] px-[22px] text-base md:inline-flex"
+            // max-lg:hidden, not "hidden": buttonStyles.base sets inline-flex, which beats a bare `hidden`.
+            className="h-[52px] rounded-[10px] px-[22px] text-base max-lg:hidden"
           >
             {content.callLabel}
           </CallButton>
-          <a
-            href={tel}
-            data-call="header"
-            aria-label={fill(content.callAriaLabel, settings)}
-            className="flex size-12 items-center justify-center rounded-[10px] bg-accent text-ink md:hidden"
-          >
-            <Icon name="phone" size={22} strokeWidth={2.2} />
-          </a>
+          <MobileMenu
+            nav={content.nav}
+            tel={tel}
+            phone={settings.phone}
+            hoursText={settings.hoursText}
+            callLabel={content.callLabel}
+          />
         </div>
       </div>
     </header>

@@ -121,7 +121,6 @@ const landingPage = defineType({
       navLinks("nav", "Menu"),
       navLinks("stickyNav", "Menu w przyklejonym nagłówku"),
       str("callLabel", "Przycisk „Zadzwoń”"),
-      str("callAriaLabel", "Opis przycisku z ikoną (czytniki ekranu)"),
       str("stickyStatus", "Status w przyklejonym nagłówku"),
     ]),
     section("hero", "Hero", [

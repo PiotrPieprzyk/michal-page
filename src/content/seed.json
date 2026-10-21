@@ -34,7 +34,6 @@
       { "label": "Wycena", "href": "#formularz" }
     ],
     "callLabel": "Zadzwoń",
-    "callAriaLabel": "Zadzwoń {telefon}",
     "stickyStatus": "Odbieramy teraz"
   },
   "hero": {

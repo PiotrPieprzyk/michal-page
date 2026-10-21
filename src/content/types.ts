@@ -77,7 +77,6 @@ export interface HeaderContent {
   nav: NavLink[];
   stickyNav: NavLink[];
   callLabel: string;
-  callAriaLabel: string;
   stickyStatus: string;
 }
 
