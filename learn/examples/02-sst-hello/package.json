@@ -1,0 +1,9 @@
+{
+  "name": "learn-sst-hello",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.1154.0",
+    "sst": "4.17.2"
+  }
+}

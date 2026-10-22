@@ -1,0 +1,11 @@
+{
+  "name": "learn-groq-playground",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "query": "node query.mjs"
+  },
+  "dependencies": {
+    "groq-js": "2.0.0"
+  }
+}
